@@ -7,11 +7,11 @@ function EditTransactionForm() {
   const navigate = useNavigate();
 
   const [transaction, setTransaction] = useState({
-    captainName: "",
-    title: "",
-    post: "",
-    mistakesWereMadeToday: false,
-    daysSinceLastCrisis: 0,
+    date: "",
+    name: "",
+    amount: 0,
+    from: "",
+    category: ""
   });
 
   const handleTextChange = (event) => {
@@ -42,47 +42,52 @@ function EditTransactionForm() {
   };
   
   return (
-    <div className="Edit">
+    <div className="New">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Captain's Name:</label>
+        <label htmlFor="name">Date:</label>
         <input
-          id="captainName"
-          value={transaction.captainName}
+          id="date"
+          value={transaction.date}
           type="text"
           onChange={handleTextChange}
-          placeholder="Name of Captain"
+          placeholder="Date"
           required
         />
-        <label htmlFor="title">Title:</label>
+        <label htmlFor="name">Name:</label>
         <input
-          id="title"
+          id="name"
           type="text"
           required
-          value={transaction.title}
-          placeholder="Title"
+          value={transaction.name}
           onChange={handleTextChange}
         />
-        <label htmlFor="post">Post:</label>
+        <label htmlFor="amount">amount:</label>
         <textarea
-          id="post"
-          type="text"
-          name="post"
-          value={transaction.post}
-          placeholder="Today I made a sandwich..."
+          id="amount"
+          type="number"
+          name="amount"
+          value={transaction.amount}
+          placeholder="sandwich..."
           onChange={handleTextChange}
         />
-        <label htmlFor="daysSinceLastCrisis">Days Since Last Crisis:</label>
+        <label htmlFor="from">From:</label>
         <input
-          id="daysSinceLastCrisis"
-          type="number"
-          value={transaction.daysSinceLastCrisis}
-          onChange={handleCheckboxChange}
-          checked={transaction.daysSinceLastCrisis}
+          id="from"
+          type="text"
+          value={transaction.from}
+          onChange={handleTextChange}
+        />
+        <label htmlFor="category">Category:</label>
+        <input
+          id="category"
+          type="text"
+          value={transaction.category}
+          onChange={handleTextChange}
         />
         <br />
         <input type="submit" />
       </form>
-      <Link to={`/transactions/${index}`}>
+      <Link to={`/transactions`}>
         <button>Head Back</button>
       </Link>
     </div>
