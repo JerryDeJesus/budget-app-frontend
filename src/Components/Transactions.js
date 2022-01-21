@@ -21,7 +21,7 @@ function Transactions() {
   const transactionSum = () => {
     let sum = 0;
     transactions.forEach((item) => {
-      sum += item.amount;
+      sum += Number(item.amount);
     })
     return sum;
   };
