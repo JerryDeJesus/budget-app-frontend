@@ -27,13 +27,15 @@ function TransactionDetails() {
   };
   return (
     <article>
-      <h5>
+      <h2>
         <span>
-          {transaction.title} - By {transaction.captainName}
+          {transaction.date} - {transaction.name}
         </span>
-      </h5>
-      <h6>{transaction.post}</h6>
-      <p>Days since last crisis: {transaction.daysSinceLastCrisis}</p>
+      </h2>
+      <h2 className="warning">Amount: {transaction.amount}</h2>
+      <h2>From: {transaction.from}</h2>
+      <h2>Category: {transaction.category}</h2>
+      <p></p>
       <div className="showNavigation">
         <div>
           <Link to={`/transactions`}>

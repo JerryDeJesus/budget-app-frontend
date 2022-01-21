@@ -18,10 +18,6 @@ function EditTransactionForm() {
     setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
-  const handleCheckboxChange = () => {
-    setTransaction({ ...transaction, mistakesWereMadeToday: !transaction.mistakesWereMadeToday });
-  };
-
   useEffect(() => {
     axios.get(`${process.env.REACT_APP_API_URL}/transactions/${index}`)
     .then((res)=>{
