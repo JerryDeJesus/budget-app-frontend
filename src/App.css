@@ -1,4 +1,47 @@
 .App {
   text-align: center;
+  background-color: lightblue;
 }
 
+html{
+  height:100%;
+  background-color: lightblue;
+}
+
+a{
+  text-decoration: none;
+}
+
+.NewForm, .EditForm{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.NewForm, .EditForm form{
+  background-color: lightcoral;
+  width:50%;
+}
+
+form{
+  margin: 10px;
+  display: grid;
+}
+
+.Submit{
+  margin-left: auto;
+  margin-right: auto;
+  width:75px;
+}
+
+nav{
+  height:75px;
+}
+
+nav a{
+  text-decoration: none;
+}
+
+nav span{
+  width:150px;
+  margin: 100px;
+}

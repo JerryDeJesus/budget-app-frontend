@@ -28,9 +28,9 @@ function NewTransactionForm() {
   };
 
   return (
-    <div className="New">
+    <div className="NewForm">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Date:</label>
+        <label htmlFor="date">Date:</label>
         <input
           id="date"
           value={transaction.date}
@@ -39,7 +39,7 @@ function NewTransactionForm() {
           placeholder="Date"
           required
         />
-        <label htmlFor="name">Name:</label>
+        <label htmlFor="name">Transaction Name:</label>
         <input
           id="name"
           type="text"
@@ -47,13 +47,13 @@ function NewTransactionForm() {
           value={transaction.name}
           onChange={handleTextChange}
         />
-        <label htmlFor="amount">amount:</label>
+        <label htmlFor="amount">Amount:</label>
         <textarea
           id="amount"
           type="number"
           name="amount"
           value={transaction.amount}
-          placeholder="sandwich..."
+          placeholder="Enter a number"
           onChange={handleTextChange}
         />
         <label htmlFor="from">From:</label>
@@ -71,7 +71,7 @@ function NewTransactionForm() {
           onChange={handleTextChange}
         />
         <br />
-        <input type="submit" />
+        <input type="submit" className="Submit"/>
       </form>
       <Link to={`/transactions`}>
         <button>Head Back</button>
