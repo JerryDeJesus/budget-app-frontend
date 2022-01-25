@@ -28,21 +28,28 @@ function Transactions() {
 
   return (
     <div className="Transactions">
-      <section>
+      <section className="IndexTable">
         <table>
           <thead>
             <tr>
-              <th>Total: {transactionSum()}</th>
-              <th>Transaction Name</th>
+              <th>Dates</th>
+              <th>| Transactions |</th>
               <th>Cost</th>
             </tr>
           </thead>
           <tbody>
             {transactions.map((transaction, index) => {
-              return <Transaction key={index} transaction={transaction} index={index} />;
+              return(
+              <Transaction 
+                key={index} 
+                transaction={transaction} 
+                index={index} 
+              />
+              );
             })}
           </tbody>
         </table>
+          <span className="Total"><b>Total: ${transactionSum()}</b></span>
       </section>
     </div>
   );

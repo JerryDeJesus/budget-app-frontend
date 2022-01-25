@@ -32,7 +32,7 @@ function TransactionDetails() {
           {transaction.date} - {transaction.name}
         </span>
       </h2>
-      <h2 className="warning">Amount: {transaction.amount}</h2>
+      <h2>Amount: {transaction.amount}</h2>
       <h2>From: {transaction.from}</h2>
       <h2>Category: {transaction.category}</h2>
       <p></p>

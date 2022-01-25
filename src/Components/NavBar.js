@@ -4,14 +4,14 @@ export default function NavBar() {
   return (
     <nav>
       <span>
-        <Link to="/">Home</Link>
+        <Link className="NavLink" to="/">Home</Link>
       </span>
       <span>
-      <Link to="/transactions">Budget App</Link>
+      <Link className="NavLink" to="/transactions">Budget App</Link>
       </span>
       <span>
       <button>
-        <Link to="/transactions/new">New Transaction</Link>
+        <Link className="NavLink" to="/transactions/new">New Transaction</Link>
       </button>
       </span>
     </nav>
