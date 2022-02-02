@@ -25,6 +25,22 @@ function Transactions() {
     })
     return sum;
   };
+  
+  const colorPicker = () => {
+    let sum = 0;
+    transactions.forEach((item) => {
+      sum += Number(item.amount);
+    })
+  let color = "";
+    if(sum > 1000){
+      color = "green"
+    }else if(sum < 0){
+      color = "red"
+    }else{
+      color = "neutral"
+    }
+    return color
+  }
 
   return (
     <div className="Transactions">
@@ -49,7 +65,7 @@ function Transactions() {
             })}
           </tbody>
         </table>
-          <span className="Total"><b>Total: ${transactionSum()}</b></span>
+          <span className={colorPicker()}><b>Total: ${transactionSum()}</b></span>
       </section>
     </div>
   );
